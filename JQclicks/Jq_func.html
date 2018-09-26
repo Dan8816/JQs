@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JQ_functions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        div{
+            background-color: antiquewhite;
+            margin: 10px;
+        }
+        button{
+            background-color: aqua;
+            display:inline-block;
+        }
+        .mug{
+            color:darkred;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="0">
+        <button type='button' class="click">click</button>
+        <h1>.click</h1>
+        <p>Bind an event handler to click js event</p>
+    </div>
+    <div id='1'>
+        <button class="hide">hide</button>
+        <h1>.hide</h1>
+        <p>hide matched elements</p>
+    </div>
+    <div id='2'>
+        <button class="show">show</button>
+        <h1>.show</h1>
+        <p>disp matched elements</p>
+    </div>
+    <div id='3'>
+        <button class="toggle">toggle</button>
+        <h1>.toggle</h1>
+        <p>disp or hide matched elements</p>
+    </div>
+    <div id=4>
+        <button class='slideDown'>slideDown</button>
+        <h1>.slideDown</h1>
+        <p>disp elements with sliding motion</p>
+    </div>
+    <div id='5'>
+        <button class="slideUp">slideUp</button>
+        <h1>.slideUP</h1>
+        <p>hide elements with sliding motion</p>
+    </div>
+    <div id='6'>
+        <button class="slideToggle">slideToggle</button>
+        <h1>.slideToggle</h1>
+        <p>disp or hide elements with sliding motion</p>
+    </div>
+    <div id='7'>
+        <button class="fadeIn">FadeIN</button>
+        <h1>.fadeIN</h1>
+        <p>displ matched elements by fading to opaque</p>
+    </div>
+    <div id='8'>
+        <button class="fadeOut">Fade Out</button>
+        <h1>.fadeOut</h1>
+        <p>hide elements by fading to transparent</p>
+    </div>
+    <div id='9'>
+        <button class="addClass">Add Class</button>
+        <h1>add class</h1>
+        <p>click the button to add class</p>
+    </div>
+    <div id='10'>
+        <button class="before">before</button>
+        <h1>.before</h1>
+        <p>insert content spec by parameter before ea element in matched elements</p>
+    </div>
+    <div id='11'>
+        <button class="after">After</button>
+        <h1>.after</h1>
+        <p>insert conent spec by parameter after ea element in matched elements</p>
+    </div>
+    <div id='12'>
+        <button class="append">Appeand</button>
+        <h1>.append</h1>
+        <p>insert conent spec by parameter to end of ea element in set of matched elements</p>
+        <p>insert conent spec by parameter to end of ea element in set of matched elements</p>
+        <p>insert conent spec by parameter to end of ea element in set of matched elements</p>
+    </div>
+    <div id='13'>
+        <button class="html">html</button>
+        <h1>.html</h1>
+        <p>get html contents of 1st element in the set of matched elements of set html content of every matched elemen</p>
+    </div>
+    <div id='14'>
+        <button class="attr">attr</button>
+        <h1>.attr</h1>
+        <p style="font-size:12px;">get the val of attrib for 1st element in set of matched elements or set one or more attrib for every matched element</p>
+    </div>
+    <div id='15'>
+        <button class="val">Val</button>
+        <h1>.val</h1>
+        <textarea>get current value of 1st element in set of matched elements or set value of every matched elemen</textarea>
+    </div>
+    <div id='16'>
+        <button class="text">TXT</button>
+        <h1>.text</h1>
+        <p>get the combined texts contents of ea. element in set of matched elements incl. the descendents or set text contents of matched elements</p>
+    </div>
+    <div id='17'>
+        <button class="data">data</button>
+        <h1>.data</h1>
+        <p>store arbitrary data assoc with matched elements of return value at named data store for 1st element in set of matched elements</p>
+        <p id="stored_data" variable="">message</p>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        $("#0 button").click(function(){
+            console.log("button is working");
+        })
+        $("#1 button").click(function(){
+            console.log("button is working");
+            $('#1 p, #2 p').hide();
+        })
+        $("#2 button").click(function(){
+            console.log("button is working");
+            $('#2 p').show();
+        })
+        $("#3 button").click(function(){
+            console.log("button is working");
+            $('#3 p').toggle();
+        })
+        $("#4 button").click(function(){
+            console.log("button is working");
+            $('#5 p, #4 p').slideDown();
+        })
+        $("#5 button").click(function(){
+            console.log("button is working");
+            $('#5 p, #4 p').slideUp();
+        })
+        $("#6 button").click(function(){
+            console.log("button is working");
+            $('#6 p').slideToggle();
+        })
+        $("#7 button").click(function(){
+            console.log("button is working");
+            $('#8 p, #7 p').fadeIn();
+        })
+        $("#8 button").click(function(){
+            console.log("button is working");
+            $('#8 p, #7 p').fadeOut();
+        })
+        $("#9 button").click(function(){
+            console.log("button is working");
+            $('#9 p').addClass("mug");
+        })
+        $("#10 button").click(function(){
+            console.log("button is working");
+            $('#10 p').before('<p>Hello World</p>');
+        })
+        $("#11 button").click(function(){
+            console.log("button is working");
+            $('#11 p').after('<p>Hello World</p>')
+        })
+        $("#12 button").click(function(){
+            console.log("button is working");
+            $('#12 p').append('<h4>APPENDED</h4>');
+        })
+        $("#13 button").click(function(){
+            console.log("button is working");
+            $('#13 p').html('hello world');
+        })
+        $("#14 button").click(function(){
+            console.log("button is working");
+            $("#14 p").attr("style","font-size: 20px;");
+        })
+        $("#15 button").click(function(){
+            console.log("button is working");
+            $("#15 textarea").val("button")
+        })
+        $("#16 button").click(function(){
+            console.log("button is working");
+            $("#16 p").text("hello World");
+        })
+        $("#17 button").click(function(){
+            console.log("button is working");
+            $("#stored_data").data("variable","stored data");
+        })
+    })
+</script>
+</html>

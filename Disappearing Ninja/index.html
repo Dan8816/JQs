@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disappearing Ninja</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .wrapper{
+            width: 1000px;
+            background-color: azure;
+        }
+        .boat{
+            width: 220px;
+            height: 180px;
+            display: inline-block;
+            margin: 10px;
+        }
+        button{
+            background-color: coral;
+            border-radius: 5px;
+            height: 50px;
+            position: absolute;
+            top: 500px;
+            left: 470px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="1">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="2">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="3">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="4">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="5">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="6">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="7">
+        <img src="Boat.jpg" alt="sailboat" class="boat" id="8">
+        <button>Restore</button>
+    </div>
+</body>
+    <script>
+        $(document).ready(function(){
+            $('#1').click(function(){
+                $('#1').fadeOut();
+            })
+            $('#2').click(function(){
+                $('#2').fadeOut();
+            })
+            $('#3').click(function(){
+                $('#3').fadeOut();
+            })
+            $('#4').click(function(){
+                $('#4').fadeOut();
+            })
+            $('#5').click(function(){
+                $('#5').fadeOut();
+            })
+            $('#6').click(function(){
+                $('#6').fadeOut();
+            })
+            $('#7').click(function(){
+                $('#7').fadeOut();
+            })
+            $('#8').click(function(){
+                $('#8').fadeOut();
+            })
+            $('button').click(function(){
+                $('img').fadeIn();
+            })
+        })
+    </script>
+</html>

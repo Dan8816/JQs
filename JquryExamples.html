@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JqExample</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+    *{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 50px;
+    }
+    </style>
+</head>
+<body>
+    <button class="hide">What happens when I click this button?</button>
+    <p>What happens when I click the p text</p>
+    <h1>What happens when I click the h1 text</h1>
+    <button class="show">Make p tag reappear</button>   
+</body>
+<script>
+    $(document).ready(function(){
+        $('.hide').click(function(){
+            console.log('click is not working');
+            $('p').hide();
+        })
+        $('.show').click(function(){
+            console.log('second button is working');
+            $('p').toggle();
+        })
+    })
+</script>
+</html>
